@@ -269,6 +269,31 @@
       font-size: 1.1rem;
     }
 
+    /* Site header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 24px;
+    }
+
+    .site-header__link {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+
+    .site-header__link:hover {
+      color: #64c8ff;
+      text-decoration-color: #64c8ff;
+    }
+
     @media (max-width: 480px) {
       .time-block {
         min-width: 100px;
@@ -308,6 +333,33 @@
       margin-bottom: 14px;
     }
 
+    .cross-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .cross-link:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(100, 200, 255, 0.4);
+      color: #64c8ff;
+    }
+
+    .cross-link__emoji {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
     .seo-divider {
       width: 60px;
       height: 1px;
@@ -317,6 +369,10 @@
   </style>
 </head>
 <body>
+
+  <header class="site-header">
+    <a href="/howmanydays/" class="site-header__link">⏳ Все счётчики</a>
+  </header>
 
   <div class="particles" id="particles"></div>
 
@@ -355,6 +411,11 @@
       </div>
 
       <p class="date-info" id="current-date"></p>
+
+      <a href="summer" class="cross-link">
+        <span class="cross-link__emoji">☀️</span>
+        <span class="cross-link__text">Счётчик до лета →</span>
+      </a>
     </section>
 
     <!-- New Year arrived view -->
@@ -502,7 +563,7 @@
       document.getElementById('target-date-label').textContent =
         '1 января ' + target.getFullYear() + ' года';
       document.getElementById('current-date').textContent =
-        formatCurrentDate(now);
+        'Сегодня ' + formatCurrentDate(now);
     }
 
     tick();

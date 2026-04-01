@@ -21,7 +21,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>" />
 
   <!-- Primary SEO -->
-  <title>Счётчики обратного отсчёта — HowManyDays</title>
+  <title>Сколько дней до</title>
   <meta name="description" content="Онлайн-счётчики обратного отсчёта до важных событий: до лета, до Нового года и других дат. Дни, часы, минуты и секунды в реальном времени." />
   <meta name="keywords" content="обратный отсчёт, счётчик дней, сколько дней до, сколько до лета, сколько до нового года" />
   <meta name="robots" content="index, follow" />
@@ -215,6 +215,31 @@
       letter-spacing: 0.5px;
     }
 
+    /* Site header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 24px;
+    }
+
+    .site-header__link {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+
+    .site-header__link:hover {
+      color: #ffd700;
+      text-decoration-color: #ffd700;
+    }
+
     @media (max-width: 480px) {
       .card {
         max-width: 100%;
@@ -225,11 +250,15 @@
 </head>
 <body>
 
+  <header class="site-header">
+    <a href="/howmanydays/" class="site-header__link">⏳ Все счётчики</a>
+  </header>
+
   <div class="particles" id="particles"></div>
 
   <main class="hero">
     <span class="logo" role="img" aria-label="Песочные часы">⏳</span>
-    <h1>HowManyDays</h1>
+    <h1>Сколько дней до</h1>
     <p class="tagline">Обратный отсчёт до важных событий</p>
 
     <nav class="cards" aria-label="Список счётчиков">
