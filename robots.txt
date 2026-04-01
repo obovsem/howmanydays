@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://obovsem.github.com/howmanydays/sitemap.xml
+Sitemap: https://obovsem.github.io/howmanydays/sitemap.xml

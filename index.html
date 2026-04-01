@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108351360', 'ym');
+    ym(108351360, 'init', {ssr:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108351360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>" />
+
+  <!-- Primary SEO -->
+  <title>Счётчики обратного отсчёта — HowManyDays</title>
+  <meta name="description" content="Онлайн-счётчики обратного отсчёта до важных событий: до лета, до Нового года и других дат. Дни, часы, минуты и секунды в реальном времени." />
+  <meta name="keywords" content="обратный отсчёт, счётчик дней, сколько дней до, сколько до лета, сколько до нового года" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="HowManyDays" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://obovsem.github.io/howmanydays/" />
+  <link rel="sitemap" type="application/xml" href="/howmanydays/sitemap.xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://obovsem.github.io/howmanydays/" />
+  <meta property="og:title" content="Счётчики обратного отсчёта — HowManyDays" />
+  <meta property="og:description" content="Онлайн-счётчики обратного отсчёта до важных событий: до лета, до Нового года и других дат." />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="HowManyDays" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Счётчики обратного отсчёта — HowManyDays" />
+  <meta name="twitter:description" content="Онлайн-счётчики обратного отсчёта до важных событий." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HowManyDays",
+    "description": "Онлайн-счётчики обратного отсчёта до важных событий.",
+    "url": "https://obovsem.github.io/howmanydays/",
+    "inLanguage": "ru"
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      font-family: -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      animation: float linear infinite;
+      opacity: 0;
+      line-height: 1;
+      user-select: none;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(110vh) rotate(0deg);    opacity: 0; }
+      10%  { opacity: 0.5; }
+      90%  { opacity: 0.5; }
+      100% { transform: translateY(-120px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+
+    .logo {
+      font-size: 64px;
+      display: block;
+      margin-bottom: 16px;
+      animation: pulse 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(255, 200, 50, 0.5));
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 20px rgba(255, 200, 50, 0.5)); }
+      50%       { transform: scale(1.08); filter: drop-shadow(0 0 40px rgba(255, 200, 50, 0.8)); }
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      color: #ffffff;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      margin-bottom: 64px;
+    }
+
+    /* Cards grid */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 36px 40px;
+      min-width: 220px;
+      flex: 1 1 220px;
+      max-width: 280px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 200, 50, 0.5), transparent);
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+      border-color: rgba(255, 215, 0, 0.3);
+    }
+
+    .card-emoji {
+      font-size: 48px;
+      line-height: 1;
+      filter: drop-shadow(0 0 12px rgba(255, 200, 50, 0.4));
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffd700;
+      letter-spacing: 0.5px;
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .card-countdown {
+      font-size: 0.75rem;
+      color: rgba(255, 215, 0, 0.7);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        max-width: 100%;
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="particles" id="particles"></div>
+
+  <main class="hero">
+    <span class="logo" role="img" aria-label="Песочные часы">⏳</span>
+    <h1>HowManyDays</h1>
+    <p class="tagline">Обратный отсчёт до важных событий</p>
+
+    <nav class="cards" aria-label="Список счётчиков">
+      <a href="summer" class="card" id="card-summer">
+        <span class="card-emoji" role="img" aria-label="Солнце">☀️</span>
+        <span class="card-title">До лета</span>
+        <span class="card-subtitle">1 июня</span>
+        <span class="card-countdown" id="summer-countdown"></span>
+      </a>
+
+      <a href="newyear" class="card" id="card-newyear">
+        <span class="card-emoji" role="img" aria-label="Ёлка">🎄</span>
+        <span class="card-title">До Нового года</span>
+        <span class="card-subtitle">1 января</span>
+        <span class="card-countdown" id="newyear-countdown"></span>
+      </a>
+    </nav>
+  </main>
+
+  <script>
+    // ── Particles ──────────────────────────────────────────────
+    (function () {
+      const container = document.getElementById('particles');
+      const emojis = ['🌸', '🌼', '🌻', '⭐', '✨', '🍃', '🌿'];
+      for (let i = 0; i < 14; i++) {
+        const el = document.createElement('div');
+        el.className = 'particle';
+        const size = Math.random() * 18 + 10;
+        const duration = Math.random() * 15 + 12;
+        const delay = -(Math.random() * duration);
+        el.style.cssText = `left:${Math.random()*100}%;font-size:${size}px;animation-duration:${duration}s;animation-delay:${delay}s;`;
+        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        container.appendChild(el);
+      }
+    })();
+
+    // ── Summer mini-countdown on card ──────────────────────────
+    function getSummer() {
+      const now = new Date();
+      const m = now.getMonth();
+      if (m >= 5 && m <= 7) return null; // it's summer
+      const y = m > 7 ? now.getFullYear() + 1 : now.getFullYear();
+      return new Date(y, 5, 1, 0, 0, 0, 0);
+    }
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function getNewYear() {
+      const now = new Date();
+      return new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0, 0);
+    }
+
+    function tickCard() {
+      const now = new Date();
+
+      // Summer card
+      const summerEl = document.getElementById('summer-countdown');
+      const summerTarget = getSummer();
+      if (!summerTarget) {
+        summerEl.textContent = 'Уже лето! 🌞';
+      } else {
+        const diff = summerTarget - now;
+        if (diff <= 0) { summerEl.textContent = 'Уже лето! 🌞'; }
+        else {
+          const d = Math.floor(diff / 86400000);
+          const h = Math.floor((diff % 86400000) / 3600000);
+          const m = Math.floor((diff % 3600000) / 60000);
+          const s = Math.floor((diff % 60000) / 1000);
+          summerEl.textContent = `${d}д ${pad(h)}:${pad(m)}:${pad(s)}`;
+        }
+      }
+
+      // New Year card
+      const nyEl = document.getElementById('newyear-countdown');
+      if (now.getMonth() === 0 && now.getDate() === 1) {
+        nyEl.textContent = 'С Новым годом! 🎉';
+      } else {
+        const nyTarget = getNewYear();
+        const diff = nyTarget - now;
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        nyEl.textContent = `${d}д ${pad(h)}:${pad(m)}:${pad(s)}`;
+      }
+    }
+
+    tickCard();
+    setInterval(tickCard, 1000);
+  </script>
+</body>
+</html>

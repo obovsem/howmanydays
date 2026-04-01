@@ -18,46 +18,46 @@
   <!-- /Yandex.Metrika counter -->
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>" />
 
   <!-- Primary SEO -->
-  <title>Сколько дней до лета — обратный отсчёт</title>
-  <meta name="description" content="Онлайн-счётчик: сколько дней, часов, минут и секунд осталось до начала лета (1 июня). Обратный отсчёт обновляется в реальном времени." />
-  <meta name="keywords" content="сколько до лета, дней до лета, счётчик до лета, обратный отсчёт лето, когда лето, до лета осталось" />
+  <title>Сколько дней до Нового года — обратный отсчёт</title>
+  <meta name="description" content="Онлайн-счётчик: сколько дней, часов, минут и секунд осталось до Нового года (1 января). Обратный отсчёт обновляется в реальном времени." />
+  <meta name="keywords" content="сколько до нового года, дней до нового года, счётчик до нового года, обратный отсчёт новый год, когда новый год" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="HowManyDays" />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://obovsem.github.io/howmanydays/summer" />
+  <link rel="canonical" href="https://obovsem.github.io/howmanydays/newyear" />
   <link rel="sitemap" type="application/xml" href="/howmanydays/sitemap.xml" />
 
-  <!-- Open Graph (Facebook, VK, Telegram) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://obovsem.github.io/howmanydays/summer" />
-  <meta property="og:title" content="Сколько дней до лета?" />
-  <meta property="og:description" content="Онлайн-счётчик обратного отсчёта до начала лета. Дни, часы, минуты и секунды в реальном времени." />
+  <meta property="og:url" content="https://obovsem.github.io/howmanydays/newyear" />
+  <meta property="og:title" content="Сколько дней до Нового года?" />
+  <meta property="og:description" content="Онлайн-счётчик обратного отсчёта до Нового года. Дни, часы, минуты и секунды в реальном времени." />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:site_name" content="HowManyDays" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Сколько дней до лета?" />
-  <meta name="twitter:description" content="Онлайн-счётчик обратного отсчёта до начала лета. Дни, часы, минуты и секунды в реальном времени." />
+  <meta name="twitter:title" content="Сколько дней до Нового года?" />
+  <meta name="twitter:description" content="Онлайн-счётчик обратного отсчёта до Нового года. Дни, часы, минуты и секунды в реальном времени." />
 
-  <!-- Structured Data: Event countdown -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Сколько дней до лета",
-    "description": "Онлайн-счётчик обратного отсчёта до начала лета (1 июня). Дни, часы, минуты и секунды в реальном времени.",
-    "url": "https://obovsem.github.io/howmanydays/summer",
+    "name": "Сколько дней до Нового года",
+    "description": "Онлайн-счётчик обратного отсчёта до Нового года (1 января). Дни, часы, минуты и секунды в реальном времени.",
+    "url": "https://obovsem.github.io/howmanydays/newyear",
     "inLanguage": "ru",
     "about": {
       "@type": "Event",
-      "name": "Начало лета",
-      "startDate": "2026-06-01",
-      "description": "Первый день лета — 1 июня 2026 года"
+      "name": "Новый год 2027",
+      "startDate": "2027-01-01",
+      "description": "Новый год — 1 января 2027 года"
     }
   }
   </script>
@@ -74,13 +74,13 @@
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      background: linear-gradient(135deg, #0d1b2a 0%, #1b2a4a 40%, #0a3d62 100%);
       font-family: -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Animated background particles */
+    /* Particles */
     .particles {
       position: fixed;
       top: 0;
@@ -100,7 +100,7 @@
     }
 
     @keyframes float {
-      0%   { transform: translateY(110vh) rotate(0deg);   opacity: 0;    }
+      0%   { transform: translateY(110vh) rotate(0deg);    opacity: 0; }
       10%  { opacity: 0.6; }
       90%  { opacity: 0.6; }
       100% { transform: translateY(-120px) rotate(720deg); opacity: 0; }
@@ -118,17 +118,17 @@
       justify-content: center;
     }
 
-    .sun-icon {
+    .main-icon {
       font-size: 80px;
       display: block;
       margin-bottom: 10px;
       animation: pulse 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(255, 200, 50, 0.6));
+      filter: drop-shadow(0 0 20px rgba(100, 200, 255, 0.6));
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 200, 50, 0.6)); }
-      50% { transform: scale(1.1); filter: drop-shadow(0 0 40px rgba(255, 200, 50, 0.9)); }
+      0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 20px rgba(100, 200, 255, 0.6)); }
+      50%       { transform: scale(1.1); filter: drop-shadow(0 0 40px rgba(100, 200, 255, 0.9)); }
     }
 
     h1 {
@@ -174,7 +174,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(255, 200, 50, 0.6), transparent);
+      background: linear-gradient(90deg, transparent, rgba(100, 200, 255, 0.6), transparent);
     }
 
     .time-block:hover {
@@ -185,11 +185,11 @@
     .time-value {
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 700;
-      color: #ffd700;
+      color: #64c8ff;
       display: block;
       line-height: 1;
       margin-bottom: 10px;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      text-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
       font-variant-numeric: tabular-nums;
       transition: transform 0.15s ease;
     }
@@ -228,10 +228,10 @@
 
     .progress-bar {
       height: 100%;
-      background: linear-gradient(90deg, #ffd700, #ff8c00);
+      background: linear-gradient(90deg, #64c8ff, #a78bfa);
       border-radius: 10px;
       transition: width 1s ease;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      box-shadow: 0 0 10px rgba(100, 200, 255, 0.5);
     }
 
     .date-info {
@@ -240,12 +240,12 @@
       letter-spacing: 1px;
     }
 
-    /* Summer arrived state */
-    .summer-arrived {
+    /* New Year arrived state */
+    .ny-arrived {
       display: none;
     }
 
-    .summer-arrived .big-emoji {
+    .ny-arrived .big-emoji {
       font-size: 100px;
       display: block;
       animation: bounce 1s ease infinite alternate;
@@ -253,18 +253,18 @@
 
     @keyframes bounce {
       from { transform: translateY(0); }
-      to { transform: translateY(-20px); }
+      to   { transform: translateY(-20px); }
     }
 
-    .summer-arrived h2 {
+    .ny-arrived h2 {
       font-size: clamp(2rem, 6vw, 4rem);
-      color: #ffd700;
+      color: #64c8ff;
       font-weight: 700;
       margin: 20px 0 10px;
-      text-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+      text-shadow: 0 0 40px rgba(100, 200, 255, 0.7);
     }
 
-    .summer-arrived p {
+    .ny-arrived p {
       color: rgba(255, 255, 255, 0.6);
       font-size: 1.1rem;
     }
@@ -311,7 +311,7 @@
     .seo-divider {
       width: 60px;
       height: 1px;
-      background: rgba(255, 215, 0, 0.25);
+      background: rgba(100, 200, 255, 0.25);
       margin: 0 auto 60px;
     }
   </style>
@@ -322,9 +322,9 @@
 
   <main class="container">
     <!-- Countdown view -->
-    <section id="countdown-view" aria-label="Обратный отсчёт до лета">
-      <span class="sun-icon" role="img" aria-label="Солнце">☀️</span>
-      <h1>До лета осталось</h1>
+    <section id="countdown-view" aria-label="Обратный отсчёт до Нового года">
+      <span class="main-icon" role="img" aria-label="Ёлка">🎄</span>
+      <h1>До Нового года осталось</h1>
       <p class="subtitle" id="target-date-label"></p>
 
       <div class="countdown" role="timer" aria-live="polite" aria-atomic="false">
@@ -347,7 +347,7 @@
       </div>
 
       <div class="progress-section">
-        <p class="progress-label">Прогресс года до лета</p>
+        <p class="progress-label">Прогресс года до Нового года</p>
         <div class="progress-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="progress-wrap">
           <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
         </div>
@@ -357,64 +357,58 @@
       <p class="date-info" id="current-date"></p>
     </section>
 
-    <!-- Summer arrived view -->
-    <section class="summer-arrived" id="summer-view" aria-label="Лето наступило">
-      <span class="big-emoji" role="img" aria-label="Солнце">☀️</span>
-      <h2>Лето уже здесь!</h2>
-      <p>Наслаждайся тёплыми днями 🌼 🌊 🌴</p>
+    <!-- New Year arrived view -->
+    <section class="ny-arrived" id="ny-view" aria-label="Новый год наступил">
+      <span class="big-emoji" role="img" aria-label="Хлопушка">🎉</span>
+      <h2>С Новым годом!</h2>
+      <p>Пусть этот год будет лучше предыдущего 🥂✨🎆</p>
     </section>
   </main>
 
   <div class="seo-divider"></div>
 
   <article class="seo-section">
-    <h2>Когда начинается лето?</h2>
+    <h2>Когда наступает Новый год?</h2>
     <p>
-      По календарю лето начинается 1 июня и длится три месяца — июнь, июль и август.
-      Именно в этот период устанавливается самая тёплая погода, световой день достигает
-      максимальной длины, а природа расцветает в полную силу.
+      Новый год наступает в ночь с 31 декабря на 1 января. В России и большинстве
+      стран мира это главный праздник года — время подводить итоги, загадывать желания
+      и встречать новое начало вместе с близкими.
     </p>
 
-    <h2>Сколько дней в лете?</h2>
+    <h2>Сколько дней осталось до Нового года?</h2>
     <p>
-      В обычный год лето длится 92 дня: 30 дней в июне, 31 день в июле и 31 день в августе.
-      В високосный год количество дней не меняется — лето всегда остаётся трёхмесячным сезоном.
+      Счётчик выше показывает точное время до полуночи 1 января в вашем часовом поясе.
+      Он обновляется каждую секунду, так что вы всегда знаете, сколько именно осталось —
+      будь то несколько месяцев или последние часы.
     </p>
 
-    <h2>Почему мы ждём лета?</h2>
+    <h2>Как готовятся к Новому году?</h2>
     <p>
-      Лето — время отпусков, каникул и долгих вечеров на улице. Тёплые ночи, запах
-      скошенной травы, купание в реке или море — всё это делает лето самым любимым
-      временем года для большинства людей. Неудивительно, что вопрос «сколько дней
-      до лета?» появляется в поисковиках уже в январе.
+      Традиционно подготовка начинается в декабре: наряжают ёлку, покупают подарки,
+      готовят праздничный стол. Но опытные люди знают — чем раньше начнёшь, тем
+      спокойнее пройдут последние дни декабря.
     </p>
 
-    <h2>Как пережить ожидание?</h2>
+    <h2>Почему мы так ждём Нового года?</h2>
     <p>
-      Пока счётчик отсчитывает дни, можно уже сейчас спланировать отпуск, выбрать
-      маршрут для путешествия или просто завести традицию каждое утро заглядывать
-      сюда — и радоваться, что цифра стала чуть меньше.
+      Новый год — это символ чистого листа. Независимо от того, каким был уходящий год,
+      бой курантов даёт ощущение нового старта. Именно поэтому вопрос «сколько дней
+      до Нового года?» звучит уже в сентябре.
     </p>
   </article>
 
   <script>
     // ── Particles ──────────────────────────────────────────────
-    (function createParticles() {
+    (function () {
       const container = document.getElementById('particles');
-      const emojis = ['🌸', '🌼', '🌻', '✨', '🍃', '🌿'];
+      const emojis = ['❄️', '⭐', '✨', '🌟', '❅', '🎁', '🔔'];
       for (let i = 0; i < 32; i++) {
         const el = document.createElement('div');
         el.className = 'particle';
         const size = Math.random() * 20 + 12;
         const duration = Math.random() * 15 + 12;
-        // Negative delay = particle starts mid-animation, never stuck at top
         const delay = -(Math.random() * duration);
-        el.style.cssText = `
-          left: ${Math.random() * 100}%;
-          font-size: ${size}px;
-          animation-duration: ${duration}s;
-          animation-delay: ${delay}s;
-        `;
+        el.style.cssText = `left:${Math.random()*100}%;font-size:${size}px;animation-duration:${duration}s;animation-delay:${delay}s;`;
         el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
         container.appendChild(el);
       }
@@ -432,9 +426,7 @@
     }
 
     // ── Helpers ────────────────────────────────────────────────
-    function pad(n) {
-      return String(n).padStart(2, '0');
-    }
+    function pad(n) { return String(n).padStart(2, '0'); }
 
     function pluralDays(n) {
       const abs = Math.abs(n);
@@ -447,42 +439,20 @@
     }
 
     // ── Countdown logic ────────────────────────────────────────
-    function getSummerTarget() {
+    function getTarget() {
       const now = getNow();
       const year = now.getFullYear();
-      // Summer starts June 1
-      let summer = new Date(year, 5, 1, 0, 0, 0, 0); // month is 0-indexed
-      // If we're already in summer (June, July, August), show next year's summer
-      const month = now.getMonth(); // 0-indexed
-      if (month >= 5 && month <= 7) {
-        // It's summer right now
-        return null;
-      }
-      // If past August, target next year
-      if (month > 7) {
-        summer = new Date(year + 1, 5, 1, 0, 0, 0, 0);
-      }
-      return summer;
+      // Jan 1 of next year
+      return new Date(year + 1, 0, 1, 0, 0, 0, 0);
     }
 
     function getYearProgress(target) {
       const now = getNow();
-      // Start of the countdown period: Sep 1 of previous year (or current year)
-      let start;
-      if (target.getFullYear() === now.getFullYear()) {
-        // Counting from Sep 1 last year
-        start = new Date(now.getFullYear() - 1, 8, 1, 0, 0, 0, 0);
-      } else {
-        // Counting from Sep 1 this year
-        start = new Date(now.getFullYear(), 8, 1, 0, 0, 0, 0);
-      }
+      // From Jan 1 this year to Jan 1 next year
+      const start = new Date(target.getFullYear() - 1, 0, 1, 0, 0, 0, 0);
       const total = target - start;
       const elapsed = now - start;
       return Math.min(100, Math.max(0, (elapsed / total) * 100));
-    }
-
-    function formatTargetDate(d) {
-      return d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
     }
 
     function formatCurrentDate(d) {
@@ -493,36 +463,29 @@
       if (el.textContent !== newVal) {
         el.textContent = newVal;
         el.classList.remove('updated');
-        void el.offsetWidth; // reflow
+        void el.offsetWidth;
         el.classList.add('updated');
         setTimeout(() => el.classList.remove('updated'), 150);
       }
     }
 
     function tick() {
-      const target = getSummerTarget();
+      const target = getTarget();
       const now = getNow();
-
-      if (!target) {
-        // It's summer!
-        document.getElementById('countdown-view').style.display = 'none';
-        document.getElementById('summer-view').style.display = 'block';
-        return;
-      }
-
       const diff = target - now;
 
-      if (diff <= 0) {
+      // Show "Happy New Year" for the first day of the year
+      if (now.getMonth() === 0 && now.getDate() === 1) {
         document.getElementById('countdown-view').style.display = 'none';
-        document.getElementById('summer-view').style.display = 'block';
+        document.getElementById('ny-view').style.display = 'block';
         return;
       }
 
       const totalSeconds = Math.floor(diff / 1000);
-      const secs    = totalSeconds % 60;
-      const mins    = Math.floor(totalSeconds / 60) % 60;
-      const hrs     = Math.floor(totalSeconds / 3600) % 24;
-      const days    = Math.floor(totalSeconds / 86400);
+      const secs  = totalSeconds % 60;
+      const mins  = Math.floor(totalSeconds / 60) % 60;
+      const hrs   = Math.floor(totalSeconds / 3600) % 24;
+      const days  = Math.floor(totalSeconds / 86400);
 
       animateValue(document.getElementById('days'),    pad(days));
       animateValue(document.getElementById('hours'),   pad(hrs));
@@ -531,15 +494,13 @@
 
       document.getElementById('days-label').textContent = pluralDays(days);
 
-      // Progress bar
       const pct = getYearProgress(target);
       document.getElementById('progress-bar').style.width = pct.toFixed(2) + '%';
       document.getElementById('progress-wrap').setAttribute('aria-valuenow', pct.toFixed(0));
-      document.getElementById('progress-text').textContent = pct.toFixed(1) + '% пути пройдено';
+      document.getElementById('progress-text').textContent = pct.toFixed(1) + '% года позади';
 
-      // Labels
       document.getElementById('target-date-label').textContent =
-        '1 июня ' + target.getFullYear() + ' года';
+        '1 января ' + target.getFullYear() + ' года';
       document.getElementById('current-date').textContent =
         formatCurrentDate(now);
     }
