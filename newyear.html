@@ -100,10 +100,10 @@
     }
 
     @keyframes float {
-      0%   { transform: translateY(110vh) rotate(0deg);    opacity: 0; }
+      0%   { transform: translateY(-120px) rotate(0deg);    opacity: 0; }
       10%  { opacity: 0.6; }
       90%  { opacity: 0.6; }
-      100% { transform: translateY(-120px) rotate(720deg); opacity: 0; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
     }
 
     .container {
@@ -462,12 +462,12 @@
     // ── Particles ──────────────────────────────────────────────
     (function () {
       const container = document.getElementById('particles');
-      const emojis = ['❄️', '⭐', '✨', '🌟', '❅', '🎁', '🔔'];
+      const emojis = ['❄️'];
       for (let i = 0; i < 32; i++) {
         const el = document.createElement('div');
         el.className = 'particle';
         const size = Math.random() * 20 + 12;
-        const duration = Math.random() * 15 + 12;
+        const duration = Math.random() * 20 + 25;
         const delay = -(Math.random() * duration);
         el.style.cssText = `left:${Math.random()*100}%;font-size:${size}px;animation-duration:${duration}s;animation-delay:${delay}s;`;
         el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
